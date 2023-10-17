@@ -4,20 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-size: 18px;
+            font-family: 'Poppins', sans-serif;
+            margin-right: 60px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 300px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+        }
+
+        label {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
     <h1>Sam Scam Shark</h1>
     <p>
         Apply for a loan here:
         <form action="/apply-loan-success" method="post">
-            Name: <input type="text" name="name"><br>
-            Email: <input type="text" name="email"><br>
-            Phone: <input type="text" name="phone"><br>
-            Loan Amount: <input type="text" name="loan_amount"><br>
-            Reason: <textarea name="reason"></textarea><br>
+            <label>Name: <input type="text" name="name"></label><br>
+            <label>Email: <input type="text" name="email"></label><br>
+            <label>Phone: <input type="text" name="phone"></label><br>
+            <label>Loan Amount: <input type="text" name="loan_amount"></label><br>
+            <label>Reason: <textarea name="reason"></textarea></label><br>
             <label><input type="checkbox" name="agree">I agree to the terms and conditions</label><br>
             <button type="submit">Submit</button>
-          </form>
+        </form>
     </p>
 </body>
 </html>

@@ -11,6 +11,7 @@ export async function parseFormData(
 
     request.on("end", () => {
       const formData: Record<string, string> = {};
+      body = body.replace(/\+/g, ' ');
       body.split("&").forEach((pair) => {
         const [key, value] = pair.split("=");
         formData[decodeURIComponent(key)] = decodeURIComponent(value);
