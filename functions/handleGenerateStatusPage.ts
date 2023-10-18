@@ -68,10 +68,9 @@ export function handleGenerateStatusPage(loan: Loan): string {
         <p>Name: ${loan.name}</p>
         <p>Phone: ${loan.phone}</p>
         <p>Loan Amount: PHP ${loan.loan_amount}</p>
+        <p>Repayment Amount: PHP ${repaymentAmount.toFixed(2)}</p>
         <p>Reason: ${loan.reason}</p>
         <p class="bold">Status: ${loan.status}</p>
-        <p>Application ID/Token: ${loan.unique_token}</p>
-        <p>Repayment Amount: PHP ${repaymentAmount.toFixed(2)}</p>
         <p class="bold">Approval Date: ${
           loan.approval_date ? formatDate(loan.approval_date) : ""
         }</p>
@@ -83,6 +82,7 @@ export function handleGenerateStatusPage(loan: Loan): string {
         }</p>
         <p class="bold">Is Past Due: ${isPastDue ? "Yes" : "No"}</p>
         <p class="bold">Is Near Due: ${isNearDue ? "Yes" : "No"}</p>
+        <p>Application ID/Token: ${loan.unique_token}</p>
       </div>
     </body>
     </html>
