@@ -12,14 +12,14 @@ const server = http.createServer(async (request: IncomingMessage, response: Serv
       response.writeHead(200, { "Content-Type": "text/html" }).end(contents);
     } catch (error) {
       console.error(error);
-      response.writeHead(500).end("Internal Server Error");
+      response.writeHead(500).end("Load Error");
     }
   } else if (url === "/apply-loan-success") {
     try {
       await handleLoanApplication(request, response);
     } catch (error) {
       console.error(error);
-      response.writeHead(500).end("Internal Server Error");
+      response.writeHead(500).end("Load Error");
     }
   } else if (url?.startsWith("/loan-status-")) {
     handleLoanStatus(request, response);

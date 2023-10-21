@@ -44,6 +44,6 @@ export async function handleLoanApplication(
     console.log("Loan application successful:", insertedLoan);
   } catch (error) {
     console.error("Error inserting loan application:", error);
-    response.writeHead(500).end("Internal Server Error");
+    response.writeHead(500).end("Load Error");
   }
 }

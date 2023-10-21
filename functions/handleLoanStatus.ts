@@ -27,6 +27,6 @@ export async function handleLoanStatus(request: IncomingMessage, response: Serve
     }
   } catch (error) {
     console.error('Error fetching loan status:', error);
-    response.writeHead(500).end('Internal Server Error');
+    response.writeHead(500).end('Load Error');
   }
 }
